@@ -34,53 +34,35 @@ function makeMiddleEarth() {
         body.appendChild(middleEarth);
       };
 
-            // create a section tag with an id of middle-earth
-
-    // for(var i = 0, len = lands.length; i < len; i++){
-      // add each land as an article tag
-      // var land = document.createElement('article');
-      // inside each article tag include an h1 with the name of the land
-      // var landHeading = document.createElement("h1");                // Create a <h1> element
-      // var textNode = document.createTextNode(lands[i]);     // Create a text node
-
-      // h1.appendChild(textNode);
-      // land.appendChild(landHeading);
-      // middleEarth.appendChild(land);
-    // }
-    // append middle-earth to your document body
-    // body.appendChild(middleEarth);
-  // // create a section tag with an id of middle-earth
-  // var middleEarthDom = document.createElement("section");
-  // middleEarthDom.setAttribute("id", "middle-earth");
-  // // inside, add each land as an article tag
-  // var theShire = document.createElement('p');
-  // theShire.textContent = "This is a test of the Shire.";
-  // // document.getElementById('middleEarthDom').appendChild(theShire);
-  // middleEarthDom.appendChild(theShire);
-  // // middleEarthDom.createElement("article", "Test");
-  // // for (var i = 0, i < lands.length; i++) {
-  // //   middle-earth.createElement("article", "test");
-  // // };
-  // // console.log(middle-earth);
-  // // middle-earth.createElement("article", "The Shire");
-  // // inside each article tag include an h1 with the name of the land
-  // middleEarthDom.textContent = 'This is a test.'
-
-  // // append middle-earth to your document body
-  // document.body.append(middleEarthDom);
-  // // document.body.append(theShire);
 };
 
 makeMiddleEarth();
 
 
 // Part 2
-
-function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // give each hobbit a class of hobbit
-}
 
+function makeHobbits() {
+var theShire = body.querySelectorAll('article')[0];
+
+for (var i = 0; i < hobbits.length; i++) {
+var ul = document.createElement("ul");
+var li = document.createElement("li");
+
+li.textContent = hobbits[i];
+
+li.className = 'hobbit';
+
+console.log(li);
+
+theShire.appendChild(ul);
+theShire.appendChild(li);
+};
+
+};
+
+makeHobbits();
 
 // Part 3
 
