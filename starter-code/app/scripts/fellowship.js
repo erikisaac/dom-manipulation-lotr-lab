@@ -24,16 +24,52 @@ var body = document.querySelector('body');
 
 
 function makeMiddleEarth() {
-  // create a section tag with an id of middle-earth
-  var middleEarthDom = document.createElement("section");
-  // inside, add each land as an article tag
+    var middleEarth = document.createElement('section');
+    for (var i = 0; i < lands.length; i++) {
+        var land = document.createElement('article');
+        var landHeading = document.createElement("h1");                // Create a <h1> element
+        landHeading.textContent = lands[i];
+        land.appendChild(landHeading);
+        middleEarth.appendChild(land);
+        body.appendChild(middleEarth);
+      };
 
-  // middle-earth.createElement("article", "The Shire");
-  // inside each article tag include an h1 with the name of the land
-  middleEarthDom.textContent = 'This is a test.'
-  // append middle-earth to your document body
-  document.body.append(middleEarthDom);
-}
+            // create a section tag with an id of middle-earth
+
+    // for(var i = 0, len = lands.length; i < len; i++){
+      // add each land as an article tag
+      // var land = document.createElement('article');
+      // inside each article tag include an h1 with the name of the land
+      // var landHeading = document.createElement("h1");                // Create a <h1> element
+      // var textNode = document.createTextNode(lands[i]);     // Create a text node
+
+      // h1.appendChild(textNode);
+      // land.appendChild(landHeading);
+      // middleEarth.appendChild(land);
+    // }
+    // append middle-earth to your document body
+    // body.appendChild(middleEarth);
+  // // create a section tag with an id of middle-earth
+  // var middleEarthDom = document.createElement("section");
+  // middleEarthDom.setAttribute("id", "middle-earth");
+  // // inside, add each land as an article tag
+  // var theShire = document.createElement('p');
+  // theShire.textContent = "This is a test of the Shire.";
+  // // document.getElementById('middleEarthDom').appendChild(theShire);
+  // middleEarthDom.appendChild(theShire);
+  // // middleEarthDom.createElement("article", "Test");
+  // // for (var i = 0, i < lands.length; i++) {
+  // //   middle-earth.createElement("article", "test");
+  // // };
+  // // console.log(middle-earth);
+  // // middle-earth.createElement("article", "The Shire");
+  // // inside each article tag include an h1 with the name of the land
+  // middleEarthDom.textContent = 'This is a test.'
+
+  // // append middle-earth to your document body
+  // document.body.append(middleEarthDom);
+  // // document.body.append(theShire);
+};
 
 makeMiddleEarth();
 
