@@ -88,7 +88,6 @@ keepItSecretKeepItSafe();
 
 // Part 4
 
-
 function makeBuddies() {
   // [X] create an aside tag
   // [X] attach an unordered list of the 'buddies' in the aside
@@ -125,8 +124,16 @@ makeBuddies();
 
 function beautifulStranger() {
   // change the 'Strider' textnode to 'Aragorn'
+
+var rivendell = body.querySelectorAll("h1")[1];
+
+var strider = rivendell.querySelectorAll("li")[3];
+
+strider.textContent = "Aragorn";
+
 }
 
+beautifulStranger();
 
 // Part 6
 
